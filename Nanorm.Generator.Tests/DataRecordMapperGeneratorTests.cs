@@ -27,18 +27,20 @@ public class DataRecordMapperGeneratorTests
                                           public bool I { get; set; }
                                           public Guid J { get; set; }
                                           public char K { get; set; }
+                                          public DateTime L { get; set; }
                                           
-                                          public byte? L { get; set; }
-                                          public short? M { get; set; }
-                                          public int? N { get; set; }
-                                          public long? O { get; set; }
-                                          public float? P { get; set; }
-                                          public double? Q { get; set; }
-                                          public decimal? R { get; set; }
-                                          public string? S { get; set; }
-                                          public bool? T { get; set; }
-                                          public Guid? U { get; set; }
-                                          public char? V { get; set; }
+                                          public byte? M { get; set; }
+                                          public short? N { get; set; }
+                                          public int? O { get; set; }
+                                          public long? P { get; set; }
+                                          public float? Q { get; set; }
+                                          public double? R { get; set; }
+                                          public decimal? S { get; set; }
+                                          public string? T { get; set; }
+                                          public bool? U { get; set; }
+                                          public Guid? V { get; set; }
+                                          public char? W { get; set; }
+                                          public DateTime? X { get; set; }
                                       }
                                       """;
 
@@ -52,7 +54,7 @@ public class DataRecordMapperGeneratorTests
                                             public static global::TestNamespace.Sample Map(global::System.Data.IDataRecord dataRecord) =>
                                                 new()
                                                 {
-                                                    // 22 members
+                                                    // 24 members
                                                     A = dataRecord.GetByte("A"),
                                                     B = dataRecord.GetInt16("B"),
                                                     C = dataRecord.GetInt32("C"),
@@ -64,17 +66,19 @@ public class DataRecordMapperGeneratorTests
                                                     I = dataRecord.GetBoolean("I"),
                                                     J = dataRecord.GetGuid("J"),
                                                     K = dataRecord.GetChar("K"),
-                                                    L = dataRecord.GetNullableByte("L"),
-                                                    M = dataRecord.GetNullableInt16("M"),
-                                                    N = dataRecord.GetNullableInt32("N"),
-                                                    O = dataRecord.GetNullableInt64("O"),
-                                                    P = dataRecord.GetNullableFloat("P"),
-                                                    Q = dataRecord.GetNullableDouble("Q"),
-                                                    R = dataRecord.GetNullableDecimal("R"),
-                                                    S = dataRecord.GetNullableString("S"),
-                                                    T = dataRecord.GetNullableBoolean("T"),
-                                                    U = dataRecord.GetNullableGuid("U"),
-                                                    V = dataRecord.GetNullableChar("V"),
+                                                    L = dataRecord.GetDateTime("L"),
+                                                    M = dataRecord.GetNullableByte("M"),
+                                                    N = dataRecord.GetNullableInt16("N"),
+                                                    O = dataRecord.GetNullableInt32("O"),
+                                                    P = dataRecord.GetNullableInt64("P"),
+                                                    Q = dataRecord.GetNullableFloat("Q"),
+                                                    R = dataRecord.GetNullableDouble("R"),
+                                                    S = dataRecord.GetNullableDecimal("S"),
+                                                    T = dataRecord.GetNullableString("T"),
+                                                    U = dataRecord.GetNullableBoolean("U"),
+                                                    V = dataRecord.GetNullableGuid("V"),
+                                                    W = dataRecord.GetNullableChar("W"),
+                                                    X = dataRecord.GetNullableDateTime("X"),
                                                 };
                                         }
                                     }

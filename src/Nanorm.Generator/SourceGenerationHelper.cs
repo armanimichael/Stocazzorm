@@ -18,6 +18,7 @@ internal static class SourceGenerationHelper
         { "bool", "GetBoolean" },
         { "System.Guid", "GetGuid" },
         { "char", "GetChar" },
+        { "System.DateTime", "GetDateTime" },
         
         { "byte?", "GetNullableByte" },
         { "short?", "GetNullableInt16" },
@@ -30,6 +31,7 @@ internal static class SourceGenerationHelper
         { "bool?", "GetNullableBoolean" },
         { "System.Guid?", "GetNullableGuid" },
         { "char?", "GetNullableChar" },
+        { "System.DateTime?", "GetNullableDateTime" }
     };
 
     public static bool IsMappableType(ITypeSymbol typeSymbol) => GetMethodsMap.ContainsKey(typeSymbol.ToString());

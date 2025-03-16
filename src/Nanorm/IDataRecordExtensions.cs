@@ -166,6 +166,22 @@ public static class IDataRecordExtensions
 
         return record.GetDateTime(record.GetOrdinal(name));
     }
+    
+    /// <summary>
+    /// Gets the nullable date and time data value of the specified field.
+    /// </summary>
+    /// <param name="record">The <see cref="IDataRecord"/>.</param>
+    /// <param name="name">The column name.</param>
+    /// <returns>The nullable date and time data value of the specified field.</returns>
+    public static DateTime? GetNullableDateTime(this IDataRecord record, string name)
+    {
+        ArgumentNullException.ThrowIfNull(record);
+
+        var i = record.GetOrdinal(name);
+
+        return record.IsDBNull(i) ? null : record.GetDateTime(i);
+    }
+
 
     /// <summary>
     /// Gets the fixed-position numeric value of the specified field.

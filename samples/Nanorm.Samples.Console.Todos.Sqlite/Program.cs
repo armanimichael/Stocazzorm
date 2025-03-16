@@ -114,6 +114,11 @@ async Task EnsureDb(SqliteConnection db)
                 {nameof(Todo.Note)} TEXT NULL,
                 IsComplete INTEGER DEFAULT 0 NOT NULL CHECK(IsComplete IN (0, 1))
             );
+
+            CREATE TABLE IF NOT EXISTS Test
+            (
+                Date TEXT
+            );
             """;
         await db.ExecuteAsync(sql);
 
