@@ -8,11 +8,11 @@
     <VersionSuffix Condition=" '$(ContinuousIntegrationBuild)' == 'true' And '$(BuildNumber)' != '' ">ci.$(BuildNumber)</VersionSuffix>
     <VersionSuffix Condition=" '$(ContinuousIntegrationBuild)' == 'true' And '$(IsShipCandidate)' == 'true' "></VersionSuffix>
     <!--<VersionSuffix Condition=" '$(ContinuousIntegrationBuild)' == 'true' And '$(IsShipCandidate)' == 'true' ">pre.$(BuildNumber)</VersionSuffix>-->
-    <Authors>Damian Edwards</Authors>
-    <Copyright>Copyright © Damian Edwards</Copyright>
+    <Authors>Michael Armani</Authors>
+    <Copyright>Copyright © Michael Armani</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/DamianEdwards/Nanorm</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/DamianEdwards/Nanorm</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/armanimichael/Stocazzorm</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/armanimichael/Stocazzorm</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IsPackable>true</IsPackable>

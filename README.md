@@ -1,4 +1,6 @@
-# Nanorm ![CI](https://github.com/DamianEdwards/Nanorm/actions/workflows/ci.yml/badge.svg) [![NuGet](https://img.shields.io/nuget/v/Nanorm?logo=nuget)](https://www.nuget.org/packages/Nanorm/)
+# Stocazzorm ![CI](https://github.com/armanimichael/Stocazzorm/actions/workflows/ci.yml/badge.svg) [![NuGet](https://img.shields.io/nuget/v/Stocazzorm?logo=nuget)](https://www.nuget.org/packages/Stocazzorm/)
+
+> **Note:** This library is a fork of the original [Stocazzorm](https://github.com/damianedwards/Stocazzorm) library by Damian Edwards. All credits for the original implementation go to him.
 
 A tiny data-access helper library for ADO.NET. Trimming and native AOT friendly.
 
@@ -10,27 +12,27 @@ It supports:
 
 ## How to use
 
-Nanorm supports .NET 6+, with special support for .NET 7+ thanks to [static virtual members on interfaces](https://learn.microsoft.com/dotnet/csharp/whats-new/tutorials/static-virtual-interface-members) and source generators.
+Stocazzorm supports .NET 6+, with special support for .NET 7+ thanks to [static virtual members on interfaces](https://learn.microsoft.com/dotnet/csharp/whats-new/tutorials/static-virtual-interface-members) and source generators.
 
 ### Getting started
 
-1. Install the `Nanorm` package that's suitable for the ADO.NET provider (i.e. database) you're using. Using the `dotnet` command line in the project directory:
+1. Install the `Stocazzorm` package that's suitable for the ADO.NET provider (i.e. database) you're using. Using the `dotnet` command line in the project directory:
     - PostgreSQL:
 
         ```shell
-        dotnet add package Nanorm.Npgsql --prerelease
+        dotnet add package Stocazzorm.Npgsql --prerelease
         ```
 
     - SQLite:
 
         ```shell
-        dotnet add package Nanorm.Sqlite --prerelease
+        dotnet add package Stocazzorm.Sqlite --prerelease
         ```
 
     - All other ADO.NET providers:
 
         ```shell
-        dotnet add package Nanorm --prerelease
+        dotnet add package Stocazzorm --prerelease
         ```
 
 1. Create a `class`, `record`, or `struct` to map a database query result to. If you're using .NET 7 or .NET 8, you can make it `partial` and decorate it with the `[DataRecordMapper]` attribute to enable the source generator which will take care of implementing the `IDataRecordMapper<T>` interface for you:
@@ -59,7 +61,7 @@ Nanorm supports .NET 6+, with special support for .NET 7+ thanks to [static virt
     }
     ```
 
-1. Create an instance of the appropriate `IDbConnection` type and use one of the Nanorm extension methods to execute a query. The `QueryAsync` methods return `IAsyncEnumerable` so you can `await foreach` over the results or simply call `ToListAsync()` to asynchronously get a `List<T>` result:
+1. Create an instance of the appropriate `IDbConnection` type and use one of the Stocazzorm extension methods to execute a query. The `QueryAsync` methods return `IAsyncEnumerable` so you can `await foreach` over the results or simply call `ToListAsync()` to asynchronously get a `List<T>` result:
 
     ```csharp
     // Using Npgsql to query a local PostgreSQL instance
@@ -85,9 +87,9 @@ Nanorm supports .NET 6+, with special support for .NET 7+ thanks to [static virt
 
 ### Using parameters
 
-Nanorm supports a few different ways to pass parameters to queries:
+Stocazzorm supports a few different ways to pass parameters to queries:
 
-- Passing an interpolated string that is processed by Nanorm's [custom string interpolation handler](https://learn.microsoft.com/dotnet/csharp/whats-new/tutorials/interpolated-string-handler). This is the preferred approach. The query is automatically parameterized in an optimal way, i.e. no string concatenation, uses pooled allocations, etc.:
+- Passing an interpolated string that is processed by Stocazzorm's [custom string interpolation handler](https://learn.microsoft.com/dotnet/csharp/whats-new/tutorials/interpolated-string-handler). This is the preferred approach. The query is automatically parameterized in an optimal way, i.e. no string concatenation, uses pooled allocations, etc.:
 
     ```csharp
     var title = "Do the dishes";
@@ -127,7 +129,7 @@ Method | Description
 
 ## Benchmarks
 
-Nanorm is intended to be a very thin layer over ADO.NET with support for trimming and native AOT. Here's how it compares to raw ADO.NET and Dapper for a [simple insert & return operation](./tests/Nanorm.Benchmarks/Program.cs) with regards to execution time and memory allocations:
+Stocazzorm is intended to be a very thin layer over ADO.NET with support for trimming and native AOT. Here's how it compares to raw ADO.NET and Dapper for a [simple insert & return operation](./tests/Stocazzorm.Benchmarks/Program.cs) with regards to execution time and memory allocations:
 
 | Method                            | Mean     | Error   | StdDev  | Ratio | RatioSD | Allocated | Alloc Ratio |
 |---------------------------------- |---------:|--------:|--------:|------:|--------:|----------:|------------:|
@@ -135,7 +137,7 @@ Nanorm is intended to be a very thin layer over ADO.NET with support for trimmin
 | AdoNetDbCommon                    | 417.6 us | 8.33 us | 7.79 us |  1.04 |    0.03 |   4.18 KB |        1.68 |
 | Dapper                            | 400.7 us | 4.57 us | 4.28 us |  1.00 |    0.01 |   3.19 KB |        1.28 |
 | DapperAot                         | 409.2 us | 5.80 us | 5.43 us |  1.02 |    0.01 |   3.27 KB |        1.32 |
-| NanormDbParameters                | 402.7 us | 5.47 us | 5.12 us |  1.00 |    0.02 |   2.65 KB |        1.07 |
-| NanormStringInterpolation         | 403.5 us | 5.75 us | 5.38 us |  1.00 |    0.02 |   2.68 KB |        1.08 |
-| NanormDbCommonParameters          | 404.0 us | 5.48 us | 5.12 us |  1.01 |    0.01 |   2.86 KB |        1.15 |
-| NanormDbCommonStringInterpolation | 406.8 us | 3.60 us | 3.19 us |  1.01 |    0.01 |   3.12 KB |        1.26 |
+| StocazzormDbParameters                | 402.7 us | 5.47 us | 5.12 us |  1.00 |    0.02 |   2.65 KB |        1.07 |
+| StocazzormStringInterpolation         | 403.5 us | 5.75 us | 5.38 us |  1.00 |    0.02 |   2.68 KB |        1.08 |
+| StocazzormDbCommonParameters          | 404.0 us | 5.48 us | 5.12 us |  1.01 |    0.01 |   2.86 KB |        1.15 |
+| StocazzormDbCommonStringInterpolation | 406.8 us | 3.60 us | 3.19 us |  1.01 |    0.01 |   3.12 KB |        1.26 |

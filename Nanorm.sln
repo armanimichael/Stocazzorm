@@ -8,11 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2446FC26-ECF
 		src\Directory.Build.props = src\Directory.Build.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanorm", "src\Nanorm\Nanorm.csproj", "{1D519F4A-0BAB-4636-9C7B-4D7C8675A965}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocazzorm", "src\Stocazzorm\Stocazzorm.csproj", "{1D519F4A-0BAB-4636-9C7B-4D7C8675A965}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{B58EBAC0-1FF5-4890-A002-4D2757AE2D98}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanorm.Samples.Web", "samples\Nanorm.Samples.Web\Nanorm.Samples.Web.csproj", "{0039C1B1-A1F6-404B-96D3-514082F2F9C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocazzorm.Samples.Web", "samples\Stocazzorm.Samples.Web\Stocazzorm.Samples.Web.csproj", "{0039C1B1-A1F6-404B-96D3-514082F2F9C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC35F2A2-B14F-43E0-93D9-D3CC9D368D57}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,25 +22,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nuget.config = nuget.config
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanorm.Npgsql", "src\Nanorm.Npgsql\Nanorm.Npgsql.csproj", "{739FDCEA-3C87-409B-B5E0-E69308CA8F2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocazzorm.Npgsql", "src\Stocazzorm.Npgsql\Stocazzorm.Npgsql.csproj", "{739FDCEA-3C87-409B-B5E0-E69308CA8F2B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanorm.Sqlite", "src\Nanorm.Sqlite\Nanorm.Sqlite.csproj", "{B69703CB-77C1-4CA6-8A49-5CF002932187}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocazzorm.Sqlite", "src\Stocazzorm.Sqlite\Stocazzorm.Sqlite.csproj", "{B69703CB-77C1-4CA6-8A49-5CF002932187}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanorm.Samples.Console.Todos.Sqlite", "samples\Nanorm.Samples.Console.Todos.Sqlite\Nanorm.Samples.Console.Todos.Sqlite.csproj", "{C60C9193-5184-42F5-8B54-B446B08CCA8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocazzorm.Samples.Console.Todos.Sqlite", "samples\Stocazzorm.Samples.Console.Todos.Sqlite\Stocazzorm.Samples.Console.Todos.Sqlite.csproj", "{C60C9193-5184-42F5-8B54-B446B08CCA8C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanorm.Samples.Console.Todos.Npgsql", "samples\Nanorm.Samples.Console.Todos.Npgsql\Nanorm.Samples.Console.Todos.Npgsql.csproj", "{EA4BE422-066B-4487-8A91-1BE79CEF6C63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocazzorm.Samples.Console.Todos.Npgsql", "samples\Stocazzorm.Samples.Console.Todos.Npgsql\Stocazzorm.Samples.Console.Todos.Npgsql.csproj", "{EA4BE422-066B-4487-8A91-1BE79CEF6C63}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DDA0F25C-F754-4C59-8C29-D85704EE8907}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanorm.Benchmarks", "tests\Nanorm.Benchmarks\Nanorm.Benchmarks.csproj", "{BAB5CEAE-EF29-4D97-A8CB-D6B421DD1749}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocazzorm.Benchmarks", "tests\Stocazzorm.Benchmarks\Stocazzorm.Benchmarks.csproj", "{BAB5CEAE-EF29-4D97-A8CB-D6B421DD1749}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanorm.Samples.Console.DbCommon", "samples\Nanorm.Samples.Console.DbCommon\Nanorm.Samples.Console.DbCommon.csproj", "{362F1F69-989D-47BF-A74A-CA4B7FF08234}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stocazzorm.Samples.Console.DbCommon", "samples\Stocazzorm.Samples.Console.DbCommon\Stocazzorm.Samples.Console.DbCommon.csproj", "{362F1F69-989D-47BF-A74A-CA4B7FF08234}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanorm.Generator", "src\Nanorm.Generator\Nanorm.Generator.csproj", "{6DDB0064-AC5A-48B6-86A1-480BEBCFC01F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocazzorm.Generator", "src\Stocazzorm.Generator\Stocazzorm.Generator.csproj", "{6DDB0064-AC5A-48B6-86A1-480BEBCFC01F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanorm.Generator.Tests", "Nanorm.Generator.Tests\Nanorm.Generator.Tests.csproj", "{B4196378-3F2B-4316-A253-0B7059368B0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocazzorm.Generator.Tests", "Stocazzorm.Generator.Tests\Stocazzorm.Generator.Tests.csproj", "{B4196378-3F2B-4316-A253-0B7059368B0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanorm.IntegrationTests", "Nanorm.IntegrationTests\Nanorm.IntegrationTests.csproj", "{A091C322-401A-4FE9-9296-72555567EDDA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stocazzorm.IntegrationTests", "Stocazzorm.IntegrationTests\Stocazzorm.IntegrationTests.csproj", "{A091C322-401A-4FE9-9296-72555567EDDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

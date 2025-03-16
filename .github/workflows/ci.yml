@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  PACKAGE_ID: Nanorm
+  PACKAGE_ID: Stocazzorm
 
 jobs:
   build:
@@ -41,7 +41,7 @@ jobs:
         uses: actions/setup-dotnet@v3
 
       - name: Add GitHub Package Repository source
-        run: dotnet nuget add source --username DamianEdwards --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name GPR "https://nuget.pkg.github.com/DamianEdwards/index.json"
+        run: dotnet nuget add source --username armanimichael --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name GPR "https://nuget.pkg.github.com/armanimichael/index.json"
 
       - name: Push to GitHub Packages
         run: dotnet nuget push **/ci/*.nupkg --source "GPR" --skip-duplicate

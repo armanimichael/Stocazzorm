@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <PackageTags>ado.net database data orm native aot trimming</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RootNamespace>Stocazzorm</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\.editorconfig" Link=".editorconfig" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Reference the source generator just to ensure it's built but don't reference its output -->
+    <ProjectReference Include="..\Stocazzorm.Generator\Stocazzorm.Generator.csproj" OutputItemType="None" ReferenceOutputAssembly="false" Private="true" />
+    <!-- Include source generator assembly in this project's package output -->
+    <None Include="@(ProjectReference->'%(RootDir)%(Directory)\bin\$(Configuration)\netstandard2.0\%(Filename).dll')" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DbConnectionExtensions.Query.cs">
+      <DependentUpon>DbConnectionExtensions.Query.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="DbDataSourceExtensions.Query.cs">
+      <DependentUpon>DbDataSourceExtensions.Query.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DbConnectionExtensions.Query.tt">
+      <LastGenOutput>DbConnectionExtensions.Query.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="DbDataSourceExtensions.Query.tt">
+      <LastGenOutput>DbDataSourceExtensions.Query.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>
