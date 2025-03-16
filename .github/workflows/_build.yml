@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: |
-            6.0.x
+            8.0.x
         global-json-file: "./global.json"
     
     - name: Restore dependencies
@@ -56,7 +56,7 @@ jobs:
     - name: Publish samples
       run: |
         for projectPath in ./samples/**/*.csproj ; do
-          for tfm in "net7.0" "net8.0"; do
+          for tfm in "net8.0"; do
             projectFileName=${projectPath##*/}
             projectName=${projectFileName%.*}
             dotnet publish "$projectPath" --output "./artifacts/$projectName" --framework $tfm --configuration Release --verbosity normal
