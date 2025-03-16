@@ -26,7 +26,7 @@
     <AnalysisModePerformance>All</AnalysisModePerformance>
     <AnalysisModeSecurity>All</AnalysisModeSecurity>
     <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
-    <IsAotCompatible Condition=" '$(TargetFramework)' == 'net7.0' ">true</IsAotCompatible>
+    <IsAotCompatible Condition=" '$(TargetFramework)' == 'net8.0' ">true</IsAotCompatible>
   </PropertyGroup>
 
 </Project>
