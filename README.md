@@ -1,6 +1,6 @@
 # Stocazzorm ![CI](https://github.com/armanimichael/Stocazzorm/actions/workflows/ci.yml/badge.svg) [![NuGet](https://img.shields.io/nuget/v/Stocazzorm?logo=nuget)](https://www.nuget.org/packages/Stocazzorm/)
 
-> **Note:** This library is a fork of the original [Stocazzorm](https://github.com/damianedwards/Stocazzorm) library by Damian Edwards. All credits for the original implementation go to him.
+> **Note:** This library is a fork of the original [Nanorm](https://github.com/damianedwards/Nanorm) library by Damian Edwards. All credits for the original implementation go to him.
 
 A tiny data-access helper library for ADO.NET. Trimming and native AOT friendly.
 
@@ -11,8 +11,6 @@ It supports:
 - Any ADO.NET data provider via [`System.Data.Common`](https://learn.microsoft.com/dotnet/api/system.data.common)
 
 ## How to use
-
-Stocazzorm supports .NET 6+, with special support for .NET 7+ thanks to [static virtual members on interfaces](https://learn.microsoft.com/dotnet/csharp/whats-new/tutorials/static-virtual-interface-members) and source generators.
 
 ### Getting started
 
